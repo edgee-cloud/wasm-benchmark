@@ -1,0 +1,16 @@
+[package]
+name = "sachamorard/rust-wasmer"
+version = "0.1.3"
+description = "Sample server written in Rust and deployed on Wasmer"
+license = "MIT"
+wasmer-extra-flags = "--net --enable-threads --enable-bulk-memory"
+
+[[module]]
+name = "rust-wasmer"
+source = "./target/wasm32-wasmer-wasi/release/rust-wasmer.wasm"
+abi = "wasi"
+
+[[command]]
+name = "proxy"
+module = "rust-wasmer"
+runner = "https://webc.org/runner/wasi"

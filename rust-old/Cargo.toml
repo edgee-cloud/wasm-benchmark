@@ -1,0 +1,15 @@
+[package]
+name = "rust-test"
+version = "1.0.0"
+authors = ["Sacha Morard <s@edgee.cloud>"]
+description = "Edgee proxy test"
+license = "None"
+edition = "2021"
+
+[[bin]]
+name = "rust-old-server"
+path = "src/main.rs"
+
+[dependencies]
+hyper = { version = "0.14", features = ["full"]}
+tokio = { version = "1", features = ["rt", "macros", "net", "time", "io-util"]}

@@ -1,0 +1,15 @@
+[package]
+name = "rust-test"
+version = "1.0.0"
+authors = ["Sacha Morard <s@edgee.cloud>"]
+description = "Edgee proxy test"
+license = "None"
+edition = "2021"
+
+[[bin]]
+name = "rust-wasm-server"
+path = "src/main.rs"
+
+[dependencies]
+hyper_wasi = { version = "0.15", features = ["full"]}
+tokio_wasi = { version = "1", features = ["rt", "macros", "net", "time", "io-util"]}

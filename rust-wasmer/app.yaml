@@ -1,0 +1,5 @@
+---
+kind: wasmer.io/App.v0
+name: rust-wasmer
+package: sachamorard/rust-wasmer@0.1.3
+app_id: da_MRpXImtBUmgR
